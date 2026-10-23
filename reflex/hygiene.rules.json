@@ -1,0 +1,57 @@
+{
+  "rules": [
+    {
+      "id": "original-app-name",
+      "description": "the name of the app this project was derived from must not reappear",
+      "regex": "m[o]mo",
+      "flags": "i"
+    }
+  ],
+  "allow": [
+    {
+      "rule": "secret-literal",
+      "file": "reflex/test/",
+      "reason": "fixtures use placeholder / made-up credentials such as '123456' on purpose"
+    },
+    {
+      "rule": "jwt",
+      "file": "reflex/test/",
+      "reason": "the privacy-filter tests feed fake tokens to prove they are redacted"
+    },
+    {
+      "rule": "private-ip",
+      "file": "reflex/test/",
+      "reason": "scanner and URL tests use documentation-style private addresses"
+    },
+    {
+      "rule": "private-key",
+      "file": "reflex/test/",
+      "reason": "the scanner's own test spells the marker it must catch"
+    },
+    {
+      "rule": "secret-literal",
+      "file": "docs/superpowers/plans/",
+      "reason": "plans quote the fake examples their tests use"
+    },
+    {
+      "rule": "private-ip",
+      "file": "docs/superpowers/plans/",
+      "reason": "plans quote the fake examples their tests use"
+    },
+    {
+      "rule": "private-key",
+      "file": "docs/superpowers/plans/",
+      "reason": "plans quote the fake examples their tests use"
+    },
+    {
+      "rule": "vn-phone",
+      "file": "docs/superpowers/plans/2026-10-06-phase-5-hygiene-and-versioning.md",
+      "reason": "describes the scanner's phone rule with made-up numbers"
+    },
+    {
+      "rule": "original-app-name",
+      "file": "workspace/",
+      "reason": "user decision 2026-10-06: the workspace holds the data (app key, package, screens, plans) of a real app being tested; only the code and docs of reflex stay free of the name"
+    }
+  ]
+}

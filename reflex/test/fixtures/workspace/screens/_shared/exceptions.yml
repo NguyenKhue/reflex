@@ -1,0 +1,8 @@
+# Identity / face / eKYC verification is never automated: the case FAILS (policy, AGENTS.md).
+# `noneText` keeps a method picker that merely LISTS "Xác thực khuôn mặt" from failing the run.
+- id: ekyc_face_verification
+  when:
+    anyText: ["Xác thực khuôn mặt", "Quét khuôn mặt", "Chụp ảnh khuôn mặt", "Xác thực tài khoản", "Quét CCCD", "Chụp CCCD"]
+    noneText: ["Chọn một trong các cách xác thực"]
+  do: { fail: "identity/face/eKYC verification shown — never automated (policy)" }
+  pinned: true

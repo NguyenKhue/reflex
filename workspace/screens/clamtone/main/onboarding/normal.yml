@@ -1,0 +1,7 @@
+# After "Skip" an interstitial ad may load late; wait until onboarding is gone (the ad loads late and starts as a bare webview) so the leg loop sees the final screen.
+- to: main/listen
+  intent: "Skip onboarding"
+  steps:
+    - { tool: tap_text, args: { text: "Skip to the sounds", exact: true } }
+    - { tool: assert_absent, args: { text: "Skip to the sounds", exact: true, timeout: 60000 } }
+  status: verified

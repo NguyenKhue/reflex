@@ -1,0 +1,20 @@
+node_modules/
+*.log
+.DS_Store
+.idea/
+
+# run/scout artifacts
+reports/
+.agentic/
+
+# local app builds
+build/
+app/
+
+# per-workspace config (account, tokens, threshold) — never commit
+.env
+
+# dropped in favour of .env; kept ignored so stray legacy copies are never committed
+reflex.workspace.local.json
+
+# plans and screens/ are committed: review `git diff screens/` for what a run learned

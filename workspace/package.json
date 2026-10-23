@@ -1,0 +1,10 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "Workspace for reflex: per-screen knowledge (screens/), flow plans (plans/) and run reports.",
+  "private": true,
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22.12"
+  }
+}

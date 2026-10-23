@@ -1,0 +1,6 @@
+{
+  "name": "fixture",
+  "reportsDir": "reports",
+  "defaults": { "platform": "android", "account": { "phone": "0900000000", "password": "123456" } },
+  "apps": { "example": { "android": { "package": "com.acme.example", "activity": "com.acme.example.MainActivity" } } }
+}

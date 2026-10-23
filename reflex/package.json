@@ -1,0 +1,31 @@
+{
+  "name": "reflex-test",
+  "version": "0.5.0",
+  "description": "Run agent-authored mobile app test plans on agent-device; a decider (Jev today) is the per-step fallback and its choices are learned.",
+  "private": true,
+  "type": "commonjs",
+  "bin": {
+    "reflex": "bin/reflex.js"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.js\"",
+    "typecheck": "tsc -p types/tsconfig.json",
+    "hygiene": "node bin/reflex.js hygiene scan --root .."
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "js-yaml": "^4.1.1",
+    "yaml": "^2.9.1"
+  },
+  "optionalDependencies": {
+    "@typesafe-ai/sdk": "0.6.0",
+    "agent-device": "0.21.20"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2"
+  },
+  "types": "types/plugins.d.ts"
+}

@@ -1,0 +1,15 @@
+# Rules for every app, checked FIRST on every screen. The runner never learns, demotes or removes
+# anything in this file — edit it by hand only.
+
+# Identity / face / eKYC verification is never automated: the case FAILS (policy, AGENTS.md).
+# Only phrases that title those screens: a bare "eKYC" also appears in ordinary hints (the example
+# app's method picker says "…mở màn eKYC/khuôn mặt…").
+# noneText: a new-device method picker lists "Xác thực khuôn mặt" as ONE option next to OTP —
+# that screen is not an eKYC screen and must not fail the run. (Behaviour change vs. the old
+# interruptions.yml.)
+- id: ekyc_face_verification
+  when:
+    anyText: [ "Xác thực khuôn mặt", "Quét khuôn mặt", "Chụp ảnh khuôn mặt", "Xác thực tài khoản", "Quét CCCD", "Chụp CCCD" ]
+    noneText: [ "Chọn một trong các cách xác thực" ]
+  do: { fail: "identity/face/eKYC verification shown — never automated (policy)" }
+  pinned: true

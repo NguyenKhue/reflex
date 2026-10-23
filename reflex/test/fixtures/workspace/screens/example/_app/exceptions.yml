@@ -1,0 +1,14 @@
+# Popups of the example app. A rule is checked BEFORE a screen's cases, so a popup that
+# covers the screen is cleared first instead of making the screen unrecognizable.
+- id: update_popup
+  when: { allText: ["Cập nhật phiên bản", "Để sau"] }
+  do: { tap: "Để sau" }
+  status: verified
+  stats: { ok: 3, fail: 0, streak: 3 }
+
+# The environment is down: this is BLOCKED (not a product failure) and stops the run.
+- id: service_maintenance
+  when: { anyText: ["Bảo trì hệ thống"] }
+  do: { blocked: "the example environment is under maintenance" }
+  status: verified
+  stats: { ok: 2, fail: 0, streak: 2 }

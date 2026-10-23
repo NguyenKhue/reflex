@@ -1,0 +1,28 @@
+# Media / screenshots (run evidence lives in <workspace>/reports/, gitignored)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.avi
+
+# App builds
+*.apk
+*.ipa
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# reflex installed deps, never committed
+node_modules/
+

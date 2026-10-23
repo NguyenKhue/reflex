@@ -1,0 +1,8 @@
+# One hop from Home into the login screen.
+- to: core/login
+  intent: "Open the login screen from Home"
+  steps:
+    # Short timeouts keep reflex's own suite instant; a real workspace keeps the defaults.
+    - { tool: tap_text, args: { text: "Đăng nhập", exact: true, timeout: 100 } }
+  status: verified
+  stats: { ok: 5, fail: 0, streak: 5 }

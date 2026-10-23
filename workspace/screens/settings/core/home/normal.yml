@@ -1,0 +1,12 @@
+# Rows of the main list, found by their visible title.
+- to: core/battery
+  intent: "Open the Battery screen"
+  steps:
+    - { tool: tap_text, args: { text: "Battery", exact: true } }
+  status: verified
+
+- to: core/network
+  intent: "Open the Network & Internet screen"
+  steps:
+    - { tool: tap_text, args: { text: "Network & Internet", exact: true } }
+  status: verified

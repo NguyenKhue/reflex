@@ -1,0 +1,7 @@
+# A full-screen interstitial ad can appear after navigation. It is a dismissable promotion, not an error.
+- id: interstitial_ad
+  when: { anyId: ["app-interstitial-slot"] }
+  do: { tap: "Close" }
+  status: verified
+  confidence: null
+  learnedFrom: null

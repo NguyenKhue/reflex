@@ -1,0 +1,27 @@
+{
+  "name": "workspace",
+  "description": "Workspace for reflex: per-screen knowledge (screens/), flow plans (plans/) and run reports. The tool lives in ../reflex.",
+  "reportsDir": "reports",
+  "defaults": {
+    "platform": "android",
+    "account": {
+      "_note": "Put your own test account in workspace/.env (gitignored): REFLEX_TEST_PHONE / REFLEX_TEST_PASSWORD / REFLEX_TEST_PIN. Never commit an account here."
+    }
+  },
+  "report": {
+    "_note": "Set REPORT_UPLOAD_URL in .env (or report.uploadUrl here) to enable `uploadReport`; report.brand { logoUrl, eyebrow, footer } customises the HTML report header and footer."
+  },
+  "apps": {
+    "_note": "App targets: a plan's `app: <key>` resolves to apps.<key>.<platform> (package/activity or bundleId). Add one with `reflex app init`.",
+    "settings": {
+      "android": {
+        "package": "com.android.settings"
+      }
+    },
+    "clamtone": {
+      "android": {
+        "package": "dev.lowtide.clamtone"
+      }
+    }
+  }
+}

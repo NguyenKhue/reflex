@@ -1,0 +1,17 @@
+- to: main/listen
+  intent: "Open the Listen tab"
+  steps:
+    - { tool: tap_text, args: { text: "Listen", exact: true } }
+  status: verified
+
+- to: main/nights
+  intent: "Open the Nights tab"
+  steps:
+    - { tool: tap_text, args: { text: "Nights", exact: true } }
+  status: verified
+
+- to: main/you
+  intent: "Open the You tab"
+  steps:
+    - { tool: tap_text, args: { text: "You", exact: true } }
+  status: verified

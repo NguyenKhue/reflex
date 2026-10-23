@@ -1,0 +1,8 @@
+# Submit the phone number: the popup closes and the password screen takes over.
+- to: core/password
+  intent: "Submit the phone number to reach the password screen"
+  steps:
+    - { tool: fill, args: { index: 0, text: "{phone}", timeout: 100 } }
+    - { tool: tap_text, args: { text: "Tiếp tục", exact: true, timeout: 100 } }
+  status: verified
+  stats: { ok: 4, fail: 0, streak: 4 }

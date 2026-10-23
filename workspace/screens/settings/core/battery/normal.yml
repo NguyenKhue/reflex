@@ -1,0 +1,6 @@
+# The system back button returns to the main list from a sub screen.
+- to: core/home
+  intent: "Go back to the main list"
+  steps:
+    - { tool: back }
+  status: verified

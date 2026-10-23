@@ -1,0 +1,23 @@
+- to: main/listen
+  intent: "Open the Listen tab"
+  steps:
+    - { tool: tap_text, args: { text: "Listen", exact: true } }
+  status: verified
+
+- to: main/nights
+  intent: "Open the Nights tab"
+  steps:
+    - { tool: tap_text, args: { text: "Nights", exact: true } }
+  status: verified
+
+- to: main/journal
+  intent: "Open the Journal tab"
+  steps:
+    - { tool: tap_text, args: { text: "Journal", exact: true } }
+  status: verified
+
+- to: main/text_size
+  intent: "Open the Text size setting"
+  steps:
+    - { tool: tap_text, args: { text: "Text size", exact: true } }
+  status: draft
